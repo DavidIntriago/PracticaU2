@@ -717,29 +717,30 @@ public class ListaEnlazada<E> {
                     field.setAccessible(true);
                     Object a = field.get(matriz[central]);
                     if (Utilidades.isNumbre(dato.getClass())) {
-
+                         
+                            
+                        
                         if ((((Number) a)).doubleValue() == ((Number) dato).doubleValue()) {
                             result.insertar(matriz[central]);
 
-                            if ((((Number) a)).doubleValue() > ((Number) dato).doubleValue()) {
+                        } else if ((((Number) a)).doubleValue() < ((Number) dato).doubleValue()) {
                                 Integer aux = central - 1;
-                                for (int i = 0; i < aux; i++) {
-                                    Boolean band = buscarPosicion(dato, a);
+                                for (bajo = 0; bajo < aux; bajo++) {
+                                    Boolean band = evaluarBusquedaObjeto(matriz[bajo], dato, clazz, atributo);
                                     if (band) {
-                                        result.insertar(matriz[i]);
+                                        result.insertar(matriz[bajo]);
                                     }
                                 }
                             } else {
                                 bajo = central + 1;
-                                for (int i = bajo; bajo < matriz.length; bajo++) {
-                                    Boolean band = buscarPosicion(dato, a);
+                                for (bajo = 0; bajo < matriz.length; bajo++) {
+                                    Boolean band = evaluarBusquedaObjeto(matriz[bajo], dato, clazz, atributo);
                                     if (band) {
-                                        result.insertar(matriz[i]);
+                                        result.insertar(matriz[bajo]);
                                     }
                                 }
                             }
-                        }
-                        return result;
+                        
                     } else {
                         if (Utilidades.isString(dato.getClass())) {
                             if (a.toString().toLowerCase().equalsIgnoreCase(dato.toString().toLowerCase())) {

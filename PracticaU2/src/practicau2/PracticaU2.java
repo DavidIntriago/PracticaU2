@@ -20,13 +20,13 @@ public class PracticaU2 {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
         
-        ListaEnlazada<Float> lista=new ListaEnlazada<>();
-        ListaEnlazada<Float> lista1=new ListaEnlazada<>();
-        
-        lista.llenarLista(20000);
-        lista.imprimirFloat();
-        lista.oredenarShell(1).imprimirFloat();
-        lista.quickShort1(1).imprimirFloat();
+//        ListaEnlazada<Float> lista=new ListaEnlazada<>();
+//        ListaEnlazada<Float> lista1=new ListaEnlazada<>();
+//        
+//        lista.llenarLista(20000);
+//        lista.imprimirFloat();
+//        lista.oredenarShell(1).imprimirFloat();
+//        lista.quickShort1(1).imprimirFloat();
 
         ListaEnlazada<Ejercicio2> listaGatos=new ListaEnlazada<>();
                 ListaEnlazada<Ejercicio2> listaGatos1=new ListaEnlazada<>();
@@ -42,7 +42,7 @@ public class PracticaU2 {
 //    listaGatos.burbuja("nombre", 1).imprimir();
 //    listaGatos.busquedaBinaria("nombre", "Paco").imprimir();
         listaGatos.order_Seleccion("id", 1).imprimir();
-        listaGatos.busquedaBinariaLineal("id", 1).imprimir();
+        listaGatos.busquedaBinariaLineaI("id", 1).imprimir();
         
     }
     
