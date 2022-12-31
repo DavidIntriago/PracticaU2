@@ -266,7 +266,7 @@ public class Ejercicio2 extends javax.swing.JFrame {
         }else{
             try {
                 listaGatos.burbuja((String)boxAtributo.getSelectedItem(), numero);
-                modeloTablaDatos.mostrar(tablaDatos, listaGatos.busquedaBinariaLineal((String)boxAtributo.getSelectedItem(), txtPalabra.getText()));
+                modeloTablaDatos.mostrar(tablaDatos, listaGatos.busquedaBinariaLineaI((String)boxAtributo.getSelectedItem(), txtPalabra.getText()));
             } catch (Exception ex) {
                 Logger.getLogger(Ejercicio2.class.getName()).log(Level.SEVERE, null, ex);
             }
